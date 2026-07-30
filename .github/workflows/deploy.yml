@@ -37,7 +37,7 @@ jobs:
         # Replace /ecoreward/ below with /YOUR-REPO-NAME/
         # e.g. if your repo URL is github.com/alice/ecoreward → /ecoreward/
         env:
-          VITE_BASE_URL: /ecoreward/
+          VITE_BASE_URL: /EcoReward/
         run: npm run build
 
       - name: Upload Pages artifact
