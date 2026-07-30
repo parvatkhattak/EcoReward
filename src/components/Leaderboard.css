@@ -1,0 +1,178 @@
+/* ─── Leaderboard ────────────────────────────── */
+.leaderboard {
+  padding: 100px 6vw;
+  background: linear-gradient(180deg, #f1f8e9 0%, #e8f5e9 100%);
+}
+
+/* Filter pills */
+.leaderboard__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.leaderboard__filter {
+  background: rgba(255,255,255,0.8);
+  border: 1.5px solid var(--color-green-100);
+  color: var(--color-green-700);
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.leaderboard__filter:hover {
+  background: var(--color-green-50);
+  border-color: var(--color-green-300);
+}
+
+.leaderboard__filter.active {
+  background: var(--color-green-700);
+  border-color: var(--color-green-700);
+  color: #ffffff;
+  transform: scale(1.04);
+}
+
+/* Table wrapper */
+.leaderboard__table-wrap {
+  background: white;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(46, 125, 50, 0.1);
+  border: 1px solid var(--color-green-100);
+}
+
+.leaderboard__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.leaderboard__table thead tr {
+  background: linear-gradient(135deg, #2e7d32, #43a047);
+}
+
+.leaderboard__table th {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.9);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.leaderboard__table th:last-child {
+  text-align: right;
+}
+
+.leaderboard__table tbody tr {
+  border-bottom: 1px solid #f0faf0;
+  transition: background 0.2s;
+}
+
+.leaderboard__table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.leaderboard__table tbody tr:hover {
+  background: #f9fdf9;
+}
+
+.leaderboard__table td {
+  padding: 1rem 1.5rem;
+  font-size: 0.95rem;
+  color: var(--color-neutral-700);
+}
+
+/* Top 3 rows */
+.leaderboard__row--top1 { background: linear-gradient(90deg, #fffde7, #ffffff) !important; }
+.leaderboard__row--top2 { background: linear-gradient(90deg, #f5f5f5, #ffffff) !important; }
+.leaderboard__row--top3 { background: linear-gradient(90deg, #fff8e1, #ffffff) !important; }
+
+/* Rank cell */
+.leaderboard__rank {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.leaderboard__badge { font-size: 1.3rem; line-height: 1; }
+
+.leaderboard__rank-num {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-neutral-500);
+}
+
+/* Name */
+.leaderboard__name {
+  font-weight: 600;
+  color: var(--color-green-800) !important;
+}
+
+/* Category chip */
+.leaderboard__cat-chip {
+  display: inline-block;
+  background: var(--color-green-50);
+  color: var(--color-green-700);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 100px;
+  border: 1px solid var(--color-green-100);
+}
+
+/* Points with progress bar */
+.leaderboard__points {
+  text-align: right !important;
+}
+
+.leaderboard__points-bar {
+  display: block;
+  height: 6px;
+  background: #e8f5e9;
+  border-radius: 100px;
+  overflow: hidden;
+  margin-bottom: 0.35rem;
+  max-width: 160px;
+  margin-left: auto;
+}
+
+.leaderboard__points-fill {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #43a047, #66bb6a);
+  border-radius: 100px;
+  transition: width 0.8s ease;
+}
+
+.leaderboard__points-num {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-green-700);
+}
+
+/* Update note */
+.leaderboard__update {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.82rem;
+  color: var(--color-neutral-400);
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .leaderboard__table th:nth-child(3),
+  .leaderboard__table td:nth-child(3) {
+    display: none;
+  }
+  .leaderboard__table td,
+  .leaderboard__table th {
+    padding: 0.85rem 1rem;
+  }
+}

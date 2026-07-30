@@ -1,0 +1,179 @@
+/* ─── Rewards Preview ────────────────────────── */
+.rewards {
+  padding: 100px 6vw;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.rewards__bg-leaf {
+  position: absolute;
+  font-size: 20rem;
+  opacity: 0.03;
+  bottom: -4rem;
+  left: -4rem;
+  pointer-events: none;
+  user-select: none;
+}
+
+.rewards__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* Card */
+.rewards__card {
+  background: #f9fdf9;
+  border: 1px solid var(--color-green-100);
+  border-radius: 24px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeSlideUp 0.6s ease var(--delay, 0s) both;
+  overflow: hidden;
+}
+
+.rewards__card::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #43a047, #66bb6a);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.rewards__card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(46, 125, 50, 0.12);
+}
+
+.rewards__card:hover::before {
+  opacity: 1;
+}
+
+/* Featured card */
+.rewards__card--featured {
+  background: linear-gradient(145deg, #e8f5e9, #f1f8e9);
+  border-color: var(--color-green-200);
+  box-shadow: 0 8px 32px rgba(46, 125, 50, 0.1);
+}
+
+/* Tags */
+.rewards__tag {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: 100px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.rewards__tag--most-popular {
+  background: #e8f5e9;
+  color: var(--color-green-700);
+  border: 1px solid var(--color-green-200);
+}
+
+.rewards__tag--new {
+  background: #e3f2fd;
+  color: #1565c0;
+  border: 1px solid #bbdefb;
+}
+
+.rewards__tag--premium {
+  background: #fff8e1;
+  color: #f57f17;
+  border: 1px solid #ffe082;
+}
+
+/* Icon */
+.rewards__icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+  transition: transform 0.3s ease;
+  line-height: 1;
+}
+
+.rewards__card:hover .rewards__icon {
+  transform: scale(1.2);
+}
+
+.rewards__card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-green-800);
+  margin: 0 0 0.6rem;
+}
+
+.rewards__desc {
+  font-size: 0.85rem;
+  color: var(--color-neutral-500);
+  line-height: 1.6;
+  margin: 0 0 1.25rem;
+}
+
+/* Points chip */
+.rewards__points-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: linear-gradient(135deg, #2e7d32, #43a047);
+  color: white;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.35rem 0.85rem;
+  border-radius: 100px;
+  letter-spacing: 0.02em;
+}
+
+.rewards__points-icon {
+  font-size: 0.9rem;
+}
+
+/* Info note */
+.rewards__note {
+  margin-top: 2.5rem;
+  background: #f0faf0;
+  border: 1px solid var(--color-green-100);
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.rewards__note span {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.rewards__note p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--color-neutral-600);
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .rewards__grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 700px) {
+  .rewards__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .rewards__grid { grid-template-columns: 1fr; }
+}
