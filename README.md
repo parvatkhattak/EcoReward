@@ -1,6 +1,6 @@
 # 🌿 EcoReward
 
-> **Turn Waste into Worth** — A college campus sustainability event website.
+> *Turn Waste into Worth* — A college campus sustainability event website.
 
 EcoReward is a lightweight, single-page React website for a campus organic-waste collection and reward initiative. Students and campus contributors can request free waste pickups via a Google Form, earn Eco Points, and redeem them for compost, plants, seeds, and eco-friendly products.
 
